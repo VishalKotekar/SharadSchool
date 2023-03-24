@@ -1,0 +1,140 @@
+{% load static %}
+{% load widget_tweaks %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="This Is the django version of School Management System For Sharad">
+
+  <title>SHARAD SCHOOL</title>
+
+  <!-- link for Favicon SITCOE -->
+  <link rel="shortcut icon"
+    href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsbsXh_z-aeAsBExwdVjk8GfC3Vm2ivIoWNP3Z5xgqDVzwFDxo6mQaB2S3KDEKeOQSJU4&usqp=CAU"
+    type="image/x-icon">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="{% static 'plugins/fontawesome-free/css/all.min.css' %}">
+
+  <link rel="stylesheet" href="{% static 'plugins/toastr/toastr.min.css' %}">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="{% static 'plugins/overlayScrollbars/css/OverlayScrollbars.min.css' %}">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{% static 'dist/css/adminlte.min.css' %}">
+
+  <!--Login Page Csss-->
+  <link rel="stylesheet" href="{% static 'dist/css/login-page.css' %}">
+
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+  <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+</head>
+
+<body>
+
+  <div class="limiter">
+    <div class="container-login100"
+      style="padding-top: 50px;background-image: url(https://img.freepik.com/free-vector/gradient-black-background-with-wavy-lines_23-2149146010.jpg?w=740&t=st=1678474722~exp=1678475322~hmac=c49aa73029592784786af37a56284043abbafe1d98e45ea2b667e2a09e118ad9);background-repeat: no-repeat;background-size: cover;">
+      <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+      <div class="wrap-login100"
+        style="padding-top: 10px;padding-bottom: 10px;padding-left: 10px;padding-right: -10px;   border-radius: 10px;border: 3px solid black;">
+
+        <div class="login100-pic js-tilt" style="width: 400px;background-image: url(https://media.istockphoto.com/id/1368151370/photo/user-typing-login-and-password-cyber-security-concept.jpg?b=1&s=170667a&w=0&k=20&c=wm6YUMs03Bup4_9XcQaX61L711qJxAUExEJp_PWO8gI=);width: 100%;max-width: 400px;height: auto;">
+        </div>
+
+        <form class="login100-form validate-form" method="post" action="{% url 'login' %}">
+          {% csrf_token %}
+          <span class="login100-form-title">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAABFFBMVEX////uHSPzZCEHu9gAAADtAADyWgAAuNbzYh3uFh3zYBjyVwDyWwDuGiDzXhHzXxPuDBXtAA3++fb+9O/tBxL//Pn++Pj+8/PwREj0gIL+7+n83ND96uJra2v3pIb6x8j5v8D95eb1j5H719jwRkrya273qKr4rI/xX2L6xLD5vafxUVXzdXj2m53708P5tZz2kWrvLzT3nHr84tjzayvx8fH1glP4tLX0eUT0czr2mHPvNzv4sJbd3d255fCenp6vr6/7zbz70dL1il69vb3Q8fdMTEyCgoLIyMgvLy9YWFiC1Ob4ra72lpjzcXTyW1/h9/pk0OQjIyNCQkKKioqe4O0XFxd2dnZCx9550uQrKyvySgCk9yUrAAATKUlEQVR4nO1dC1faSBsG1qS5h3AVQimoLYIKCBFB4VuRbrvtttu9di/9///jy20mM8kkmSAX2ZPnnJ4qGWMe5533PpNMJkWKFClSpEiRIkWKFCmeKaou9v0cW8Mjk7fBtPb9JNtCi5HlrAnmdt9PsmHcvnK/+KRlbWhvnO9fXZzu7aE2iPY5c+0uvCvA8Mr+tnKvlWoHvyYrJ0w+W/rZ+qp1ci87DOXry0/tTKamZeVS/s2+H/FpaGU1Z+F9+sIwJZegSTGvMdc1+5LM3L+Kv89zRfUL45LSND7rg5x3v+CZn/f9oOvjIsCLBO1k38+5Pl4xFARl/pC1zRnFJJYOeAozmTcahZAesjZ9zMooFzlf0hiG0fI89jHzed/PuTYeUQ3Ka6Xr88+3rdbt1c/3PIOKL2PJafWksu/nTYKT+1Ymc5r3popnjq8QF619+0XLIxSvqicMc0jS2uZNRrfX3jwxZy3/mNPXyDzypmcgZw9Ip16WLKmUvQn8RBr1eO3pIWusVtv1c66NR9wMamftkIE1fCBzMKEG7spor8NHXjGoVuUvdveMT0KLoSVoGkxs7KEE/5gRzPvnxWcTTlCK/P1BWIw2okCy/DWiINufL0yDzxzXHpHhrxGroR2HrdjnhUrNW12aF/ydnjOOB8CXUONRhQ6OzByOh/oKCGr+En52hZp4nrmE8ngL5DR/QKFw5dplyEAZrWFa0xJIOPqYPzRj4cWFeWjDa4FIMX8GZhFM4iGFUbWSb1ZahFAYhvZVd8b547D7PT+4Jh8+chWPolwwQKVeuiuUOQhbYQGoRyh2V8RAOA98gRYU09vb1rO3F20z/quBOXGVY+WenMxgXDZtoGVLprW8DL/388CVFcODB3YZnIYkpDQQciBCnH/2AQaSmZGBPxOWrYFskITVQTHkgT2o5Un8LDfU/SHEczsshsDpvgxhKGeDA/6jDH8+VIbHcVJ65v7QlwNdh1DTfArRpdBeItakZDLU+/q4vjcGcXjDlEpgyrQYawFDetm1FqY9tNJRU9GCOpvcdQZdvV4s74sMEe03n2tANUIGx0SLL8uuFJ9qYE5P221z3mdczgTHCaqiSCKbmw6bPb3xnHhWZZ/X9oY4iTB7COr7ro9TNGyGECZVRWLV2aqzbOyFDwHA8wb2LnNNmEQvA+wqGrnkfDsWWROSpCiqIAgcoGvyZCVlMu8X9sDIjxN/9PRImETYc9J2s//AE6/oer+/7A46zbvVajrLmYKqKAIHaIrsZK4X90ELAYyAYSbxKkDRS8qcgBYNYma8UG/o3UFzOLOIOjxNltxqMN4FkzBUYRYDxkJ47jcrM9DuwVRUdBajXBh350NDFCWLJidIyqyjb5NENIAJz5/Dj15lvUKGrPFeWxRICFglqPg7l/XeylDN2TRZKqwy2g/J9oX30B6T6sk1U8rzPF9isjUvzkWXKHNBF/82+s2pyqpcjlNFo7N7BftJ9rw0OYs8c7V1cn52dn7SQrLEVUzNMo/B24Wg0R0ZomSSVKRJd4eKxzLLWH03H5Ne+oL6rPlknTXl8WBmkjTXJDfa0USOR2LDn1grnUX9xDkaHMul5DXS+mCqmLpHEVc7WJH6UFSUkfnFBRZLlC5Cn7tygUX/2notC43BlFU4QZx2t+vY9VesamnxesDTzl+HrK7T+xI6DoaLyaGPJIkT2Fl37TvE/4qJJNhOh9LJOFXuLI9UuWukTOiJ16ohM/knNtYWe4YomBz7T7hHBMYrUQDeo1S0jTjPnCFRn6Zd+US1+kZDCv33rXNNe2oFWF9JqimrW1iPxREreJGAPYlXzEUr0856FGVNu2y13ZmstFuXPOLj8PypVXyjtxRhGN9JiiAONx099wwFi3XEgtUua105RShm5TyTPz6/rNUuz4/NLxEfji9trujUGEmqwg02dj8T46mERnMcayy9i228vcucLKtVn8c/la83WlWrD0VBmm3OLZ+LAspPMnrY5SpF+2VCMx8PfcKqYnMzlmM8ZVEBFZSOLzolVdUC2HxldDmTpOkmprGnYBMorgKuEzlB45/EyH6UtVBums7Hk41jeciiK1Al3JGqR9g0l1sob+szlr17mqQ2MBXKsUOCf18DTjiv5X2zyeddey9rVh/jFtCR2NlT7EZfQCVUEMgi8erYNnv8xWntmGE8d7VkNdXY2Yt86WpblV9zGnPrL8aeiEqoNA0NXt7wJdMna1tm/haWmEqfLeNfued55vUWa75F09Va14ubi5iEjiKGVmuwNxZqVjfQfdz6bpKOyK6nb5oYQSnmJqcg6QQTFkC1bL9FaCl8W4ciRlCgF4RThnfA7K4dYWyIy/hRPnQwggZ9/qB9f39s4uxsly2IjRybdC0OWIzg8y2DuSgabDKN2kVnUJ09hyJCDIpTKUkuboyGEsJs3/UDKhSNCf3gMlr5OgARddAQ59Rjh4irxgnPppwXB/0brbbpolpG3FLWZxvoqXQKo55DZJSln/kdYPH27duo63dNqtugMqquosf+YuIHEv4XBmo2fizMf++Ojo4ymZsfw8YUFJolpSOGgsvFqNGfXiTEr8loQSzeHS0W35sEjx4WH4/+ugkZ1qfRp1MkYJLifKFfvkuGF38mZObC5obg97CBd/GJ1CWiZoQYGTXx64tkDNeU0rc+hqGrsTCMvdcEmUIx3hL+kJDhD8mYAbx0mf3m/v996MjYyr8ueQTtxHYcEhH87sUviYjZuPnw9neL1Udbwdz8YVN8fxSibgpxyn/kKVJOofHW/kw2icnI2XjnrLwF+H7xwf7gZcjwbnRIU0BsoUJlXJLpmr/piQG8R/g4KnThSGqIPi1Gi2kfMRVUtiWZrlnHWPxlS2jGks/fjr6+tHjZmjXUYkQzHKlJFKmNJLpmLWNhCuW/GU+dmtJaMf97Fzo+2nNDgopYWwjwdwKGaxgLi5mpVX4EhsKaTpP0h+R3slD0hJTL0Ya9CXRNcmOxePjdmcKvgOFXUzo/WpMYbjEi0GcTC2kmicF4kfiJPrrW78Gz9gv304fENzPR86xhghTkP/STmPiJPqCcHKNvziFgmhxNzxqK9ImdXzCGUX53YmPhGIYMMIqu3VhEWYtorDyXTUzwY7/+DfArgn8c/IQgsSq9efvSYfgSMlw4JnKxFsHMFKpSbrbWDTaPB4cUVKUPJm3LawsbX1z2o6RvBhkmUDTbxYPrZ//hBRUfI9RMwRAjM/weQzqXjQ4VF9Vq8iz4w1d3IWZ+fPnx4/eWaL6P0jMTJSdGudOelCo0vRyvX78+d/HFwQXEmY1jB/cOssmPbnE0DCqTfwU+QTBUcsI06n6eppFoGF45h0DyNJBNMMnLUK4dhITcwCIkxh9JcXPjuaVUDCsyaedvONaoRt38/mCbwq/fL25uFg/2lH5Y/EGWUbtcFm3mBlIiKYUN+HRY8/Sdmw9HGN6F2Qm7XMbNIjsXvCQNVXwfaIeKxprnttx8xRmGZaGa9sOrUaXqTKYOPW8hPqNj4bIUTwxizb4oy04Aklae5g/yMIdgjo0JiWCIzxlUv72dREzXPU7h7deXmYWlQt/fZP59HyKjQ9YNiWKyZ56qofTazkP2VZKw9tE7NxXHbfsR5DECKE5cDSLEpYSXUEwpMokWSHudQhk+pSvqxkToxfEMzEysDSjATWRxvRcAVE1tNrBdGRvFwOtMk2JDojvwx6B1TKkaE2142/g2C7R3ksvFDocZYS5H2REXclgEgeEX/4+W62O9r+sN1JHs98JmoT5edppNv79cbEpIlj7GVtiAWX2Jslk8bIdzAL4N3PXexN51yLKqMV2BLZVdiVDILY+X85U5mFUU8Q6/Muew7mxlMNYtRCkRmKpR7yJGIYBHDcVBQ/chjCcsa+0ctfbGWrtIFZY1Vs3mjOUUbA4by8HQMP8KirvNFGubqXdUBd9rm1Otnanst8jVCCIoe9sIDT5T2kTE7y7cuX3VKjec9zqrnGTvNlQUizKU2d5o6m24BCoeZgDL+kj08wMrLNpzgxVSlrIZvkrpumlQldZnrmhJ7p6C4pyDWzmgrmiIrOp/dsTcjcTAVSirMcHtnfvrOYNS19SoXDc5Dwka7rMhNfT6VPFz6E6GM6yFPocFBDny/NlzE9NdUQQ/K1F2KbTp2qDhDr6pS5Dj0KTznaPFcW1Yn+AUvdBoLObCwBlxRTPYbcJSNkO9pnHd4KluHajLcNXudEhI+E6HOodt9PAW2OCbfSaDhHFTFUVRVSnelINuDIXCulgIOzACAzgruR4WoRVsHeePDVboJCJ/k8bYRKPRQylKvbqN+IkpG+5taW3iFwqrD/zuuRLC0DFU/hAdYxgMjZprtm813M49zqArz9BsSHBTGOWIjOVQRc2BgxkipRwXMGDo5di4AgUI9hVKs09xaDnjjGwgf3R/Gb0v5TgV/whr0ApSGKMeDV1eAgB00Ip0IcZt7CQCvxvtZgk8ksFxvlwg2jmRUwLKvYe24NGuKUDR0cYcZest8bw9FGBX0AD9q/sXXVPx+4rY8CAFdJVySiKCUKlTLt/Yk+dL7gbnDrYJx9dVtmT904RREPy/tYjJMF1qKUiRrkW4osVMIjjxY47FAuoEUywN0Rd4Y+ZQDVBAGyuoY3YE7pYZZULjvZ3EuG4ghdHFbbSC61NRxAWxj66zYNG2iYn8Gr3MfZfilIJinOumudlgHdvMaD42tvCGK1xgcAoBYcJMSWS9Igxjx0dWaAQ17Lw2BzLYfVH3e8xsVCBgRFJooEKazFZA1CdOIpliB9xppK7h4QkvK1+4EBWlxVDAXDZx3Q3sHVtSBSPeaESmTr0UxtInplFNETEU0MCD1v0iQM9Za4GL782IdN2Qd5TM/JPIhf75oymUsY1LiW2Fh4K9UZYTY6vCUalT5EyacWASOYm8CDAKBFuBOTQ90h1osbT3yrKTGNsflTrNI9ngeYCiMCWKWBJbQdlnGIZi00onhO2ShQjPusnoufSZSSDDohBlbIRSUAMUMFvx5N6R8dQUVY5dRZoN8ql7FvAzrovBHAtL0vXR5g6PKzbQWdGdmUGjqkZNYyXU//btxveb/Rxxb04MBSyuSLz9kIRCz2A5TpxE2J3Q1Kn/YKFeII9E6IWMoYAZVmkz50cU5hLLCdIo1PK0w1oXAqXDUWAWg8F2NIVidGy8LgqDnCQoyiCMY1jqNFg6HCp+iv7CGE4hkD/D44on2QofulNWlbgQjmH+NxPowihP/BT9mT2MAhuggDvlm91C2F+xkmj0iBzJrpssB0cW/L6NfyXGUMAULV3XQQI05oYoGh2C6SCnTol9JoEow6dOoyngTvkGu/Ag9DtVFIdBf5z4vkdyF8ZYwCniGYwYCphTvhFbEUSxuxK+Tf2nGRJdN/KhpVb2EAWehepF72TFnHJua3uxi8s7SRziv53kfzulw27AlA4ws4ir/GgKZey8gK02wxb6TUFADxglVb0dVToUA67ZCsu8oY5ZDAU8rtjosV8k1LvD3AicbUyoeruqdCYE9EUZVagYQzIFGGVhTnl8i8kmMO6NOt2xxTL4rhJXlUoEnT9GliIWxDZJFJYwSN1sXEGNur5c6o1qIHXqpDCKIilbhEwGpjBJFAo5yVVGDTT+ghpq2dnFgeeFQiHgujmv6NZFUkMPEkCgMW5DIVAYKkDjYEcGgJpbURIpC55PRcB1c/xuKxdMMFzeZKG5DLzy6VAYsPBvQMyjTlR1Vwdc+FOnTunQqlgEky2emGIKc4gVRu3lq0teghwrZ7iCMZKCzuu24HPd3O5n66EJdR6Y5kcLvOUp6u5I1kcNQ4CTXJgFKzIDNu54hE0COxkZvMPDfqpgawDIn2IasY7ZSatqWjQE76SkerCq2GU5doeHsOCpUyeFUXbKSIHcKFhxmGOG95Iog3JfFZBUDuaz2npoIHK7PaMEq3o7frerHQMHUbhLSsIm19cto0gsh1ap8MvSfDlkc+LOFqENrOrtHB0M6tW+eqRrLRQ8ldYIJjnQGl8dv6ywAjlZt02gvW5OCgNqFKwGUnaO4ZDwSimuSmwSWDNewff6jxwnbt019QNJncoyNBbgcZqAT33iFEUCWagONkscO4y6nFPV5Me1PRUVbxLla/sT01hwqvuSDkVo9uvF+rijWhZEygWTsFiOQwh02BVmiNsmEM5U3QG8DUOu3z0VhNxo3hkaotU6q7CqkWMVLiewCikbYpo/0J4uiJNg7FCfuZc5RZzu56CnNjwI2mnZKxqSW35p9IaqxEqKCfO/0FPkyx3VeRPNkJyC7s3Ma5JkNPf2GhPofzspjPpqhSiTut7tjMxwS48sa46Xy2XE8xfG+nifZ+XBqvcauw4PBCB1usMzMHcMsGGI2feDbA9O1s01Fv9JOKnTLRzk/XxgbxjSKN5+dLCwU6dPemXHc4edOj2kV40nh1X1Ppy3VK+DKi/LW9p1+FxQK/2nVWnGSp2uu4H7YHDOJD/t47BwmuA1cgcKylcBHjAe1zrtI0WKFClSpEiRIkWKFClSpEiRIkWKFClSpEiRIkWKFClSpEiR4gDxf2AM4FZVlC1fAAAAAElFTkSuQmCC"
+              alt="logo" style="width: 50px;padding-top: 1px;">
+
+            <br>
+            SHARAD SCHOOL</span>
+          <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+
+          <span class="error-msg">
+            {% if form.errors %}
+            <p class="error-msg">Your username and password didn't match. Please try again.</p>
+            {% endif %}
+
+            {% if next %}
+            {% if user.is_authenticated %}
+            <p class="error-msg"> Your account doesn't have access to this page. To proceed,
+              please login with an account that has access.</p>
+            {% else %}
+          </span>
+          <p style="padding-left: 50px; color:blue;"><br>Please Login to see this page.</p>
+          {% endif %}
+          {% endif %}
+          </span>
+          <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+            <input class="input100" id="id_username" name="username" type="text" placeholder="Username">
+            <span class="focus-input100"></span>
+            <span class="symbol-input100">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+            </span>
+          </div>
+
+          <div class="wrap-input100 validate-input" data-validate="Password is required">
+            <input class="input100" type="password" id="id_password" name="password" placeholder="Password">
+            <span class="focus-input100"></span>
+            <span class="symbol-input100">
+              <i class="fa fa-lock" aria-hidden="true"></i>
+            </span>
+          </div>
+
+          <div class="container-login100-form-btn">
+            <button class="login100-form-btn" type="submit" value="Login">
+              Login
+            </button>
+            <input type="hidden" name="next" value="{{ next }}">
+
+          </div>
+
+          <div class="text-center p-t-12">
+            <span class="txt1">
+              Forgot
+            </span>
+            <a class="txt2" href="#">
+              Username / Password?
+            </a>
+          </div>
+
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- REQUIRED SCRIPTS -->
+  <!-- jQuery -->
+  <script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'dist/js/jquery.formset.js' %}"> </script>
+  <!-- Bootstrap -->
+  <script src="{% static 'plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'plugins/toastr/toastr.min.js' %}"></script>
+  <!-- overlayScrollbars -->
+  <script src="{% static 'plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js' %}"></script>
+
+  <!-- AdminLTE App -->
+  <script src="{% static 'dist/js/adminlte.js' %}"></script>
+
+  <!-- OPTIONAL SCRIPTS -->
+  <script src="{% static 'dist/js/demo.js' %}"></script>
+
+  {% if messages %}
+  {% for message in messages %}
+  <script type=text/javascript>
+      toastr.options.progressBar = true;
+      toastr.{{ message.tags }}('{{ message }}')
+    </script>
+  {% endfor %}
+  {% endif %}
+
+</body>

@@ -1,0 +1,278 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pure CSS Responsive Card Hover Effect</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+ <style>
+  * {
+    box-sizing: border-box;
+  }
+  .title{
+    font-size:60px;
+    padding:20px 0px;
+  }
+  body {
+    font-family: 'Lato', sans-serif;
+    background-color:#eaeaea;
+  }
+  .container{
+    width:900px;
+    margin:0px auto;
+  }
+  /* Float three columns side by side */
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 0 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 700px) {
+    
+   .container{
+    width: 100%;
+  }
+    
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    text-align: center;
+    background-color: #fff;
+    border-radius:10px;
+    cursor:pointer;
+  }
+  .card .profile{
+     border-radius:10px;
+     transition: 0.2s;
+  }
+  .card:hover .profile{
+    transform:scale(1.4);
+    border-top-right-radius:50px;
+    border-top-left-radius:50px;
+  }
+  
+  .card .content{
+    width:100%;
+    height:100%;
+    position:relative;
+    overflow:hidden;
+  }
+  .card .content .back{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color: #f1f1f1e6;
+    transition:1s;
+    
+    z-index:1;
+    padding:10px;
+  }
+  
+  .from-left{
+    top:0;
+    left:-100%;
+  }
+  .card:hover .content .from-left {
+     left:0%;
+  }
+  
+  .from-bottom{
+    top:100%;
+    left:0;
+  }
+  .card:hover .content .from-bottom {
+     top:0%;
+  }
+  
+  .from-right{
+    top:0%;
+    right:-100%;
+  }
+  .card:hover .content .from-right {
+     right:0;
+  }
+  .des{
+    text-align:justify;
+    font-family:serif;
+  }
+  .card .content .back h3{
+    font-size:15px;
+    letter-spacing:2px;
+  }
+  .card .content .back .tem-img{
+    border-radius:100%;
+  }
+  
+  .card .content .back .des{
+    font-size:13px;
+    padding:20px 0px;
+  }
+  .card .content .back .social-icon{
+    list-style:none;
+    margin:0px;
+    padding:0px;
+  }
+  .card .content .back .social-icon li{
+    display:inline-block;
+  }
+  
+  .card .content .back .social-icon li a{
+    display:block;
+    background:#333;
+    color:#fff;
+    width:40px;
+    height:40px;
+    text-align:center;
+    line-height:40px;
+    border-radius:100%;
+  }  
+  .about-section {
+    padding: 26px;
+    text-align: center;
+    background-color: #243b55;
+    color: white;
+  
+  }
+  .imgg{
+    opacity: 0.2;
+  }
+  .imgg:hover{
+    opacity: 1;
+    box-shadow: 10px 10px 18px 10px rgba(0, 0, 0, 0.2);
+  }
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+  .title {
+    color: grey;
+  }
+  .title:hover{
+    color: skyblue;
+  }
+  h2{
+    font-family: DyeLine;
+  }
+ 
+ </style>
+</head>
+
+  <div class="about-section">
+    <div class="imgg">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1bftg3iTVnO-a1yPEuM-QvnXIhh2CNILTQA&usqp=CAU">
+    </div>
+    <h1>About Us</h1>
+    <p>Welcome To Sharad SCHOOL</p>
+    
+    <p style="padding-bottom: 15px"><i>The Brief Information About The Developers Of Sharad School</i></p>
+  </div>
+  <div class="row">
+
+    <div class="column">
+      <div class="card">
+        <div class="content">
+          <div class="front">
+            <img class="profile" width="100%" src="static/dist/img/Vishal.jpeg" alt="Vishal">
+            <h2>Vishal</h2>
+          </div>
+          <div class="back from-left">
+            <h2>Vishal</h2>
+            <h3 class="title">Team Leader/Backend Developer/Django</h3>
+            <p class="des">
+              A Team Leader is a professional in charge of guiding, monitoring and leading an entire group. They are responsible for motivating their teammates as well as inspiring positive communication within them so that they can work together toward achieving goals.
+            </p>
+            <ul class="social-icon">
+              <p><i class="fa fa-envelope" aria-hidden="true"></i> vishalkotekar0096@gmail.com</p>
+              <p>  
+                <a href="mailto:vishalkotekar0096@gmail.com">Contact</a>
+              </p>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <div class="content">
+          <div class="front">
+            <img class="profile" width="100%" src="static/dist/img/Akshay.jpg" alt="Akshay">
+            <h2>Akshay</h2>
+          </div>
+          <div class="back from-bottom">
+            <h2>Akshay</h2>
+            <h3 class="title">Quality Assurence Engineer</h3>
+            
+           
+            <p class="des">
+              <br>Quality assurance (QA) is any systematic process of determining whether a product or service meets specified requirements. 
+              <br>I have experienced The Unit Testing and Integration Testing in Tcs As a Intern
+            
+            </p>
+            <ul class="social-icon" style="padding-top:1px;">
+            <br>
+              <p><i class="fa fa-envelope" aria-hidden="true"></i> akshaykumbhar809@gmail.com</p>
+              <p>  
+                <a href="mailto:akshaykumbhar809@gmail.com">Contact</a>
+              </p>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <div class="content">
+          <div class="front">
+            <img class="profile" width="89%" src="static/dist/img/Photo_Shubhankar Motugade_page-0001.jpg" alt="Messi">
+            <h2>Shubhankar</h2>
+          </div>
+          <div class="back from-right">
+            <h2>Shubhankar</h2>
+            <h3 class="title">Frontend Developer/Database Management</h3>
+            <p class="des">
+              A front-end developer creates websites and applications using web languages such as HTML, CSS, and JavaScript that allow users to access and interact with the site or app. When you visit a website, the design elements you see were created by a front-end developer.
+            </p>
+            <ul class="social-icon">
+              <p><i class="fa fa-envelope" aria-hidden="true"></i> motugadeshubhankar@gmail.com</p>
+              <p>  
+                <a href="mailto:motugadeshubhankar@gmail.com">Contact</a>
+              </p>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+  </div>
+</div>
+<br>
+</html>
+{% endblock content %}

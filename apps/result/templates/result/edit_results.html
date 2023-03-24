@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block title %}
+Update Results
+{% endblock title %}
+
+
+{% block content %}
+<form method="POST">
+  {% csrf_token %}
+  {{ formset.management_form}}
+<div style="overflow-x:auto;">
+  <table id="studenttable" class="table table-sm" style="  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;" >
+    <thead>
+      <tr>
+        <th>S/N</th>
+        <th>Name</th>
+        <th>Subject</th>
+        <th>Test Score</th>
+        <th>Exam Score</th>
+        <th>Total</th>
+        <th>Delete</th>
+        <th>Class</th> 
+      </tr>
+    </thead>
+    <tbody>
+      {% for form in formset %}
+      {{ form.id}}
+        <tr>
+          <td>{{forloop.counter }}</td>
+          <td>{{form.instance.student }}</td>
+          <td>{{form.instance.subject}}</td>
+          <td style="width: 10%;">{{form.test_score | add_class:"form-control form-control-sm"}}</td>
+          <td style="width: 10%;">{{form.exam_score | add_class:"form-control form-control-sm"}}</td>
+          <td>{{form.instance.total_score}}</td>
+          <td>{{form.DELETE}}</td>
+          <td>{{form.instance.current_class}}</td>
+
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+  <input type="submit" class="btn btn-success" value="Save">
+  </form>
+
+{% endblock content %}
