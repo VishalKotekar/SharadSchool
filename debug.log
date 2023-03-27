@@ -1,0 +1,363 @@
+INFO 2023-03-27 22:12:30,596 Watching for file changes with StatReloader
+ERROR 2023-03-27 22:12:34,084 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\Desktop\SharadSchool-main\SharadSchool\apps\corecode\middleware.py", line 9, in __call__
+    current_session = AcademicSession.objects.get(current=True)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 431, in get
+    num = len(clone)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 262, in __len__
+    self._fetch_all()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 1162, in execute_sql
+    sql, params = self.as_sql()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 513, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 55, in pre_sql_setup
+    self.setup_query()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 46, in setup_query
+    self.select, self.klass_info, self.annotation_col_map = self.get_select()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 262, in get_select
+    sql, params = self.compile(col)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 445, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\expressions.py", line 835, in as_sql
+    sql = '.'.join(map(compiler.quote_name_unless_alias, identifiers))
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 436, in quote_name_unless_alias
+    r = self.connection.ops.quote_name(name)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\backends\dummy\base.py", line 20, in complain
+    raise ImproperlyConfigured("settings.DATABASES is improperly configured. "
+django.core.exceptions.ImproperlyConfigured: settings.DATABASES is improperly configured. Please supply the ENGINE value. Check settings documentation for more details.
+ERROR 2023-03-27 22:12:34,088 "GET / HTTP/1.1" 500 121091
+ERROR 2023-03-27 22:12:34,396 Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\Desktop\SharadSchool-main\SharadSchool\apps\corecode\middleware.py", line 9, in __call__
+    current_session = AcademicSession.objects.get(current=True)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 431, in get
+    num = len(clone)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 262, in __len__
+    self._fetch_all()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 1162, in execute_sql
+    sql, params = self.as_sql()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 513, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 55, in pre_sql_setup
+    self.setup_query()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 46, in setup_query
+    self.select, self.klass_info, self.annotation_col_map = self.get_select()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 262, in get_select
+    sql, params = self.compile(col)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 445, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\expressions.py", line 835, in as_sql
+    sql = '.'.join(map(compiler.quote_name_unless_alias, identifiers))
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 436, in quote_name_unless_alias
+    r = self.connection.ops.quote_name(name)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\backends\dummy\base.py", line 20, in complain
+    raise ImproperlyConfigured("settings.DATABASES is improperly configured. "
+django.core.exceptions.ImproperlyConfigured: settings.DATABASES is improperly configured. Please supply the ENGINE value. Check settings documentation for more details.
+ERROR 2023-03-27 22:12:34,397 "GET /favicon.ico HTTP/1.1" 500 120994
+INFO 2023-03-27 22:13:52,648 C:\Users\Admin\Desktop\SharadSchool-main\SharadSchool\school_app\settings.py changed, reloading.
+INFO 2023-03-27 22:13:53,445 Watching for file changes with StatReloader
+INFO 2023-03-27 22:13:54,977 C:\Users\Admin\Desktop\SharadSchool-main\SharadSchool\school_app\settings.py changed, reloading.
+INFO 2023-03-27 22:13:55,776 Watching for file changes with StatReloader
+ERROR 2023-03-27 22:13:57,771 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: corecode_academicsession
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\Desktop\SharadSchool-main\SharadSchool\apps\corecode\middleware.py", line 9, in __call__
+    current_session = AcademicSession.objects.get(current=True)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 431, in get
+    num = len(clone)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 262, in __len__
+    self._fetch_all()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: corecode_academicsession
+ERROR 2023-03-27 22:13:57,782 "GET / HTTP/1.1" 500 129283
+ERROR 2023-03-27 22:13:58,167 Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: corecode_academicsession
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\Desktop\SharadSchool-main\SharadSchool\apps\corecode\middleware.py", line 9, in __call__
+    current_session = AcademicSession.objects.get(current=True)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 431, in get
+    num = len(clone)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 262, in __len__
+    self._fetch_all()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: corecode_academicsession
+ERROR 2023-03-27 22:13:58,169 "GET /favicon.ico HTTP/1.1" 500 129186
+INFO 2023-03-27 22:14:52,782 "GET / HTTP/1.1" 302 0
+INFO 2023-03-27 22:14:52,811 "GET /accounts/login/?next=/ HTTP/1.1" 200 11905
+INFO 2023-03-27 22:14:52,844 "GET /static/plugins/toastr/toastr.min.css HTTP/1.1" 200 6454
+INFO 2023-03-27 22:14:52,847 "GET /static/plugins/fontawesome-free/css/all.min.css HTTP/1.1" 200 58578
+INFO 2023-03-27 22:14:52,848 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 200 19724
+INFO 2023-03-27 22:14:52,855 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 200 5251
+INFO 2023-03-27 22:14:52,856 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 200 13632
+INFO 2023-03-27 22:14:52,858 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 80698
+INFO 2023-03-27 22:14:52,872 "GET /static/dist/js/demo.js HTTP/1.1" 200 12616
+INFO 2023-03-27 22:14:52,873 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 200 42383
+INFO 2023-03-27 22:14:52,875 "GET /static/dist/js/adminlte.js HTTP/1.1" 200 57530
+INFO 2023-03-27 22:14:52,875 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 200 686707
+INFO 2023-03-27 22:14:52,881 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 200 88145
+INFO 2023-03-27 22:14:52,887 "GET /static/dist/css/login-page.css HTTP/1.1" 200 8610
+INFO 2023-03-27 22:14:53,022 "GET /static/plugins/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 79444
+INFO 2023-03-27 22:15:09,570 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2023-03-27 22:15:09,594 "GET / HTTP/1.1" 200 12458
+INFO 2023-03-27 22:15:09,611 "GET /static/plugins/Datatables/datatables.min.css HTTP/1.1" 200 25780
+INFO 2023-03-27 22:15:09,633 "GET /static/plugins/Datatables/datatables.min.js HTTP/1.1" 200 2042446
+INFO 2023-03-27 22:15:09,721 "GET /static/plugins/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1" 200 13584
+INFO 2023-03-27 22:15:31,722 "GET /site-config HTTP/1.1" 200 14041
+INFO 2023-03-27 22:15:53,119 "GET /site-config HTTP/1.1" 200 14041
+INFO 2023-03-27 22:15:56,184 "GET /site-config HTTP/1.1" 200 14041
+INFO 2023-03-27 22:15:56,226 "GET /static/plugins/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+INFO 2023-03-27 22:15:56,227 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 304 0
+INFO 2023-03-27 22:15:56,227 "GET /static/plugins/toastr/toastr.min.css HTTP/1.1" 304 0
+INFO 2023-03-27 22:15:56,237 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 304 0
+INFO 2023-03-27 22:15:56,237 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2023-03-27 22:15:56,238 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 304 0
+INFO 2023-03-27 22:15:56,239 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+INFO 2023-03-27 22:15:56,247 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 304 0
+INFO 2023-03-27 22:15:56,248 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 304 0
+INFO 2023-03-27 22:15:56,255 "GET /static/dist/js/demo.js HTTP/1.1" 304 0
+INFO 2023-03-27 22:15:56,256 "GET /static/dist/js/adminlte.js HTTP/1.1" 304 0
+INFO 2023-03-27 22:16:02,087 "GET /session/list/ HTTP/1.1" 200 14766
+INFO 2023-03-27 22:16:04,899 "GET /site-config HTTP/1.1" 200 14041
+INFO 2023-03-27 22:16:21,142 "GET /static/plugins/Datatables/datatables.min.css HTTP/1.1" 304 0
+INFO 2023-03-27 22:16:22,522 "GET /static/plugins/toastr/toastr.js.map HTTP/1.1" 200 25633
+INFO 2023-03-27 22:16:22,525 "GET /static/dist/js/adminlte.js.map HTTP/1.1" 200 113276
+INFO 2023-03-27 22:16:22,529 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 318045
+WARNING 2023-03-27 22:16:22,545 "GET /static/plugins/Datatables/pdfmake.min.js.map HTTP/1.1" 404 1870
+INFO 2023-03-27 22:16:22,623 "GET /static/dist/css/adminlte.min.css.map HTTP/1.1" 200 2149167
+INFO 2023-03-27 22:17:59,791 C:\Users\Admin\Desktop\SharadSchool-main\SharadSchool\apps\corecode\migrations\0002_auto_20200506_1520.py changed, reloading.
+INFO 2023-03-27 22:18:00,632 Watching for file changes with StatReloader
+INFO 2023-03-27 22:18:03,886 "GET / HTTP/1.1" 200 12458
+INFO 2023-03-27 22:18:03,924 "GET /static/plugins/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+INFO 2023-03-27 22:18:03,933 "GET /static/plugins/toastr/toastr.min.css HTTP/1.1" 304 0
+INFO 2023-03-27 22:18:03,943 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 304 0
+INFO 2023-03-27 22:18:03,944 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+INFO 2023-03-27 22:18:03,948 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 304 0
+INFO 2023-03-27 22:18:03,950 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 304 0
+INFO 2023-03-27 22:18:03,960 "GET /static/dist/js/adminlte.js HTTP/1.1" 304 0
+INFO 2023-03-27 22:18:03,960 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 304 0
+INFO 2023-03-27 22:18:03,962 "GET /static/dist/js/demo.js HTTP/1.1" 304 0
+INFO 2023-03-27 22:18:03,963 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 304 0
+INFO 2023-03-27 22:18:03,971 "GET /static/plugins/Datatables/datatables.min.js HTTP/1.1" 304 0
+INFO 2023-03-27 22:18:03,974 "GET /static/plugins/Datatables/datatables.min.css HTTP/1.1" 304 0
+INFO 2023-03-27 22:18:03,995 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2023-03-27 22:18:04,134 "GET /static/plugins/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+INFO 2023-03-27 22:18:04,134 "GET /static/plugins/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1" 304 0
+INFO 2023-03-27 22:18:07,440 "GET /site-config HTTP/1.1" 200 14041
+INFO 2023-03-27 22:18:09,532 "GET /site-config HTTP/1.1" 200 14041
+INFO 2023-03-27 22:19:40,921 "GET / HTTP/1.1" 200 12458
+INFO 2023-03-27 22:19:40,977 "GET /static/plugins/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+INFO 2023-03-27 22:19:40,978 "GET /static/plugins/toastr/toastr.min.css HTTP/1.1" 304 0
+INFO 2023-03-27 22:19:40,980 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 304 0
+INFO 2023-03-27 22:19:40,981 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 304 0
+INFO 2023-03-27 22:19:40,981 "GET /static/plugins/Datatables/datatables.min.css HTTP/1.1" 304 0
+INFO 2023-03-27 22:19:40,983 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2023-03-27 22:19:40,988 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 304 0
+INFO 2023-03-27 22:19:41,003 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+INFO 2023-03-27 22:19:41,004 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 304 0
+INFO 2023-03-27 22:19:41,005 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 304 0
+INFO 2023-03-27 22:19:41,006 "GET /static/dist/js/adminlte.js HTTP/1.1" 304 0
+INFO 2023-03-27 22:19:41,010 "GET /static/dist/js/demo.js HTTP/1.1" 304 0
+INFO 2023-03-27 22:19:41,012 "GET /static/plugins/Datatables/datatables.min.js HTTP/1.1" 304 0
+INFO 2023-03-27 22:19:41,182 "GET /static/plugins/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+INFO 2023-03-27 22:19:41,183 "GET /static/plugins/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1" 304 0
+INFO 2023-03-27 22:19:47,937 "GET /site-config HTTP/1.1" 200 14041
+INFO 2023-03-27 22:19:49,646 "GET /site-config HTTP/1.1" 200 14041
+INFO 2023-03-27 22:20:06,638 "POST /site-config HTTP/1.1" 200 14056
+INFO 2023-03-27 22:20:11,483 "POST /site-config HTTP/1.1" 200 14056
+INFO 2023-03-27 22:20:13,556 "GET /site-config HTTP/1.1" 200 14041
+INFO 2023-03-27 22:20:16,638 "GET /site-config HTTP/1.1" 200 14041
+INFO 2023-03-27 22:20:18,218 "GET /site-config HTTP/1.1" 200 14041
+INFO 2023-03-27 22:21:55,402 C:\Users\Admin\Desktop\SharadSchool-main\SharadSchool\apps\corecode\migrations\0002_auto_20200506_1520.py changed, reloading.
+INFO 2023-03-27 22:21:56,554 Watching for file changes with StatReloader
+INFO 2023-03-27 22:21:58,884 "GET /site-config HTTP/1.1" 200 14041
+INFO 2023-03-27 22:21:58,930 "GET /static/plugins/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+INFO 2023-03-27 22:21:58,934 "GET /static/plugins/toastr/toastr.min.css HTTP/1.1" 304 0
+INFO 2023-03-27 22:21:58,940 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 304 0
+INFO 2023-03-27 22:21:58,942 "GET /static/plugins/Datatables/datatables.min.css HTTP/1.1" 304 0
+INFO 2023-03-27 22:21:58,949 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+INFO 2023-03-27 22:21:58,950 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 304 0
+INFO 2023-03-27 22:21:58,951 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 304 0
+INFO 2023-03-27 22:21:58,952 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 304 0
+INFO 2023-03-27 22:21:58,953 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2023-03-27 22:21:58,955 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 304 0
+INFO 2023-03-27 22:21:58,957 "GET /static/dist/js/adminlte.js HTTP/1.1" 304 0
+INFO 2023-03-27 22:21:58,963 "GET /static/dist/js/demo.js HTTP/1.1" 304 0
+INFO 2023-03-27 22:21:58,967 "GET /static/plugins/Datatables/datatables.min.js HTTP/1.1" 304 0
+INFO 2023-03-28 00:39:45,612 Watching for file changes with StatReloader
+INFO 2023-03-28 00:39:48,089 "GET / HTTP/1.1" 200 12458
+INFO 2023-03-28 00:39:48,121 "GET /static/plugins/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+INFO 2023-03-28 00:39:48,122 "GET /static/plugins/toastr/toastr.min.css HTTP/1.1" 304 0
+INFO 2023-03-28 00:39:48,135 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 304 0
+INFO 2023-03-28 00:39:48,135 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+INFO 2023-03-28 00:39:48,141 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 304 0
+INFO 2023-03-28 00:39:48,150 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 304 0
+INFO 2023-03-28 00:39:48,150 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 304 0
+INFO 2023-03-28 00:39:48,154 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 304 0
+INFO 2023-03-28 00:39:48,155 "GET /static/dist/js/demo.js HTTP/1.1" 304 0
+INFO 2023-03-28 00:39:48,155 "GET /static/plugins/Datatables/datatables.min.css HTTP/1.1" 304 0
+INFO 2023-03-28 00:39:48,156 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2023-03-28 00:39:48,156 "GET /static/plugins/Datatables/datatables.min.js HTTP/1.1" 304 0
+INFO 2023-03-28 00:39:48,156 "GET /static/dist/js/adminlte.js HTTP/1.1" 304 0
+INFO 2023-03-28 00:39:48,337 "GET /static/plugins/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+INFO 2023-03-28 00:39:48,337 "GET /static/plugins/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1" 304 0
+INFO 2023-03-28 00:40:08,093 "GET /site-config HTTP/1.1" 200 14041
+INFO 2023-03-28 00:40:11,202 "GET /site-config HTTP/1.1" 200 14041
+INFO 2023-03-28 00:40:16,803 "GET /about HTTP/1.1" 200 19206
+INFO 2023-03-28 00:40:16,880 "GET /static/dist/img/Akshay.jpg HTTP/1.1" 200 83496
+INFO 2023-03-28 00:40:16,881 "GET /static/dist/img/Vishal.jpeg HTTP/1.1" 200 188912
+INFO 2023-03-28 00:40:16,885 "GET /static/dist/img/Photo_Shubhankar%20Motugade_page-0001.jpg HTTP/1.1" 200 569296
+INFO 2023-03-28 00:40:37,862 "GET /result/create/ HTTP/1.1" 200 13554
+INFO 2023-03-28 00:40:43,852 "GET /student/list HTTP/1.1" 200 13122
+INFO 2023-03-28 00:40:45,669 "GET /staff/list/ HTTP/1.1" 200 13124
+INFO 2023-03-28 00:40:48,444 "GET /finance/list/ HTTP/1.1" 200 13089
+INFO 2023-03-28 00:40:57,567 "GET /result/create/ HTTP/1.1" 200 13554
+INFO 2023-03-28 00:41:04,257 "GET /result/edit-results/ HTTP/1.1" 200 13386
+INFO 2023-03-28 00:41:07,126 "GET /result/view/all HTTP/1.1" 200 11977
+INFO 2023-03-28 00:41:09,504 "GET /result/view/all HTTP/1.1" 200 11977
+INFO 2023-03-28 00:41:10,896 "GET /result/edit-results/ HTTP/1.1" 200 13386
+INFO 2023-03-28 00:41:15,491 "GET /site-config HTTP/1.1" 200 14041
+INFO 2023-03-28 00:41:17,653 "GET /about HTTP/1.1" 200 19206
+INFO 2023-03-28 00:43:29,824 "GET /student/list HTTP/1.1" 200 13122
+INFO 2023-03-28 00:43:37,262 "GET /staff/list/ HTTP/1.1" 200 13124
+INFO 2023-03-28 02:00:13,172 "GET /staff/list/ HTTP/1.1" 200 13124
+INFO 2023-03-28 02:00:13,203 "GET /static/plugins/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+INFO 2023-03-28 02:00:13,207 "GET /static/plugins/toastr/toastr.min.css HTTP/1.1" 304 0
+INFO 2023-03-28 02:00:13,215 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 304 0
+INFO 2023-03-28 02:00:13,216 "GET /static/plugins/Datatables/datatables.min.css HTTP/1.1" 304 0
+INFO 2023-03-28 02:00:13,217 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2023-03-28 02:00:13,223 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 304 0
+INFO 2023-03-28 02:00:13,230 "GET /static/dist/js/adminlte.js HTTP/1.1" 304 0
+INFO 2023-03-28 02:00:13,231 "GET /static/dist/js/demo.js HTTP/1.1" 304 0
+INFO 2023-03-28 02:00:13,232 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 304 0
+INFO 2023-03-28 02:00:13,236 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 304 0
+INFO 2023-03-28 02:00:13,237 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 304 0
+INFO 2023-03-28 02:00:13,238 "GET /static/plugins/Datatables/datatables.min.js HTTP/1.1" 304 0
+INFO 2023-03-28 02:00:13,238 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+INFO 2023-03-28 02:00:13,302 "GET /static/plugins/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1" 304 0
+INFO 2023-03-28 02:00:13,303 "GET /static/plugins/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+INFO 2023-03-28 02:06:52,787 C:\Users\Admin\Desktop\SharadSchool-main\SharadSchool\school_app\settings.py changed, reloading.
+INFO 2023-03-28 02:08:14,033 Watching for file changes with StatReloader
+INFO 2023-03-28 02:08:15,326 "GET / HTTP/1.1" 200 12458
+INFO 2023-03-28 02:09:46,419 C:\Users\Admin\Desktop\SharadSchool-main\SharadSchool\school_app\settings.py changed, reloading.
+INFO 2023-03-28 02:09:47,203 Watching for file changes with StatReloader
+INFO 2023-03-28 02:09:49,523 "GET / HTTP/1.1" 200 12458
+INFO 2023-03-28 02:09:53,925 "GET / HTTP/1.1" 200 12458
+INFO 2023-03-28 02:09:55,535 "GET /student/list HTTP/1.1" 200 13122
+INFO 2023-03-28 02:26:33,929 "GET / HTTP/1.1" 200 12458
+INFO 2023-03-28 02:26:33,965 "GET /static/plugins/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+INFO 2023-03-28 02:26:33,969 "GET /static/plugins/toastr/toastr.min.css HTTP/1.1" 304 0
+INFO 2023-03-28 02:26:33,987 "GET /static/plugins/Datatables/datatables.min.css HTTP/1.1" 304 0
+INFO 2023-03-28 02:26:33,989 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 304 0
+INFO 2023-03-28 02:26:33,991 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 304 0
+INFO 2023-03-28 02:26:33,993 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 304 0
+INFO 2023-03-28 02:26:34,000 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 304 0
+INFO 2023-03-28 02:26:34,002 "GET /static/dist/js/adminlte.js HTTP/1.1" 304 0
+INFO 2023-03-28 02:26:34,003 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 304 0
+INFO 2023-03-28 02:26:34,003 "GET /static/dist/js/demo.js HTTP/1.1" 304 0
+INFO 2023-03-28 02:26:34,004 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2023-03-28 02:26:34,004 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+INFO 2023-03-28 02:26:34,009 "GET /static/plugins/Datatables/datatables.min.js HTTP/1.1" 304 0
+INFO 2023-03-28 02:26:34,076 "GET /static/plugins/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+INFO 2023-03-28 02:26:34,076 "GET /static/plugins/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1" 304 0
+INFO 2023-03-28 02:33:14,397 "GET /staff/list/ HTTP/1.1" 200 13124
+INFO 2023-03-28 02:45:37,604 "GET /staff/list/ HTTP/1.1" 200 13124
+INFO 2023-03-28 02:55:32,371 "GET /staff/list/ HTTP/1.1" 200 13124
+INFO 2023-03-28 02:55:32,404 "GET /static/plugins/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+INFO 2023-03-28 02:55:32,404 "GET /static/plugins/toastr/toastr.min.css HTTP/1.1" 304 0
+INFO 2023-03-28 02:55:32,417 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2023-03-28 02:55:32,418 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 304 0
+INFO 2023-03-28 02:55:32,420 "GET /static/plugins/Datatables/datatables.min.css HTTP/1.1" 304 0
+INFO 2023-03-28 02:55:32,423 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 304 0
+INFO 2023-03-28 02:55:32,431 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 304 0
+INFO 2023-03-28 02:55:32,432 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 304 0
+INFO 2023-03-28 02:55:32,434 "GET /static/dist/js/adminlte.js HTTP/1.1" 304 0
+INFO 2023-03-28 02:55:32,436 "GET /static/dist/js/demo.js HTTP/1.1" 304 0
+INFO 2023-03-28 02:55:32,437 "GET /static/plugins/Datatables/datatables.min.js HTTP/1.1" 304 0
+INFO 2023-03-28 02:55:32,437 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 304 0
+INFO 2023-03-28 02:55:32,445 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+INFO 2023-03-28 02:55:32,491 "GET /static/plugins/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+INFO 2023-03-28 02:55:32,493 "GET /static/plugins/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1" 304 0
+INFO 2023-03-28 03:18:35,784 "GET / HTTP/1.1" 200 12458
+INFO 2023-03-28 03:18:40,954 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2023-03-28 03:18:40,977 "GET / HTTP/1.1" 302 0
+INFO 2023-03-28 03:18:41,000 "GET /accounts/login/?next=/ HTTP/1.1" 200 11905
+INFO 2023-03-28 03:18:41,031 "GET /static/dist/css/login-page.css HTTP/1.1" 304 0
