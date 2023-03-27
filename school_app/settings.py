@@ -25,7 +25,7 @@ SECRET_KEY = "__$1ud47e&nyso5h5o3fwnqu4+hfqcply9h$k*h2s34)hn5@nc"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1','127.0.0.1:8000','76.76.21.21']
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1']
 
 
 # Application definition
@@ -182,6 +182,7 @@ SESSION_COOKIE_AGE = 10800
 #         },
 #     },
 # }
+
 
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
