@@ -1,4 +1,7 @@
 # SharadSchool
+![s](https://user-images.githubusercontent.com/108614877/230978840-fa221f0c-d169-4d08-9999-eec518ae4388.PNG)
+![g](https://user-images.githubusercontent.com/108614877/230979032-9b63947b-a19e-418d-8324-1f912509b851.PNG)
+
 School Management System
 A web application that simplifies the management of academic and administrative tasks in a school.
 
